@@ -23,7 +23,7 @@ brew install jq
 ```
 
 ### Download the script, run.sh
-* Downlowd the script, run.sh in your machine.
+* Downlowd the script, run.sh in your machine. https://github.com/thankthank/searchJob_api_example/blob/main/run.sh
 * Add execution permission.
 ```
 chmod 755 ./run.sh
