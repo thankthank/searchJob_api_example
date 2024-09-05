@@ -10,8 +10,14 @@ _sourceCategory=*
 
 ## Below are the steps to run this script
 
+### install jq in your linux machine.
+For openSUSEleap, run the command below.
+```
+zypper in jq
+```
+
 ### Download the script, run.sh
-* Downlowd the script, run.sh in a linux machine.
+* Downlowd the script, run.sh in your linux machine.
 * Add execution permission.
 ```
 chmod 755 ./run.sh
