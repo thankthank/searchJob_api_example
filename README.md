@@ -10,7 +10,7 @@ _sourceCategory=*
 
 ## Below are the steps to run this script
 
-### install jq in your machine.
+### Install jq in your machine.
 For openSUSEleap, run the command below.
 ```
 zypper in jq
