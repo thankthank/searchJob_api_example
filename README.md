@@ -2,7 +2,7 @@
 
 This is the complete example to run search job API based on the guide. https://help.sumologic.com/docs/api/search-job/
 
-This example will run the query below with -15m time range.
+This example will run the query below with a fixed time range.
 ```
 _sourceCategory=*
 | count by _sourceCategory
@@ -10,14 +10,20 @@ _sourceCategory=*
 
 ## Below are the steps to run this script
 
-### install jq in your linux machine.
+### install jq in your machine.
 For openSUSEleap, run the command below.
 ```
 zypper in jq
 ```
 
+For Mac, run the command below.
+```
+/bin/bash -c "$(curl -fsSL raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install jq
+```
+
 ### Download the script, run.sh
-* Downlowd the script, run.sh in your linux machine.
+* Downlowd the script, run.sh in your machine.
 * Add execution permission.
 ```
 chmod 755 ./run.sh

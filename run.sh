@@ -18,15 +18,16 @@ EOFF
 
 createJsonEscapedQuery_querypayload()
 {
-    DURATION_MS=$1
-    EPOC=$(date +%s)
-    ((EPOC_F=EPOC - DURATION_MS - 120 )) 
-    ((EPOC_T=EPOC - 120 ))
+    # DURATION_MS=900; #last 15m
+    # EPOC=$(date +%s)
+    # ((EPOC_F=EPOC - DURATION_MS - 120 )) 
+    # ((EPOC_T=EPOC - 120 ))
+    # TIME_F=$(date --date=@${EPOC_F} "+%FT%H:%M:00")
+    # TIME_T=$(date --date=@${EPOC_T} "+%FT%H:%M:00")
 
-    TIME_F=$(date --date=@${EPOC_F} "+%FT%H:%M:00")
-    TIME_T=$(date --date=@${EPOC_T} "+%FT%H:%M:00")
-    # TIME_F="2023-03-18T00:00:00"
-    # TIME_T="2023-04-18T00:00:00"
+    # Change the time range as you want
+    TIME_F="2024-09-01T00:00:00"
+    TIME_T="2024-09-01T01:00:00"
 
 
     cat ./query.txt | jq -Rs . > ./jsonEscapedQuery.txt
@@ -78,5 +79,5 @@ runSearch()
 
 
 createQuery;
-createJsonEscapedQuery_querypayload 900; #last 15m
+createJsonEscapedQuery_querypayload
 runSearch;
